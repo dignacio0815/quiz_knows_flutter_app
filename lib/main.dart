@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_knows_flutter_app/pages/trending_card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Main(),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: const Text("Quiz Knows"),
+        ),
+        body: const TrendingCard(),
+      ),
     );
   }
 }
