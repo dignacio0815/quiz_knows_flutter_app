@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_knows_flutter_app/utils/chip_topic.dart';
 
 class TrendingCard extends StatelessWidget {
   const TrendingCard({super.key});
@@ -11,7 +12,7 @@ class TrendingCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: Container(
-        height: 300,
+        height: 134,
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.0),
@@ -23,10 +24,43 @@ class TrendingCard extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Text('Nouveautés'),
+              padding: const EdgeInsets.fromLTRB(10, 10, 0, 8),
+              child: Align(alignment: Alignment.topLeft, child: ChipTopic()),
             ),
-            Text("data")
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Row(
+                  children: [
+                    Text(
+                      'UX Design Principles',
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        textStyle: const TextStyle(fontSize: 20),
+                      ),
+                      onPressed: () {},
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            "Study",
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Icon(Icons.arrow_right_sharp)
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
